@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-title">HR</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="attendance.html">Attendance</a></li>
+                    <li><a href="#">Leave</a></li>
+                    <li><a href="#">Pay Slip</a></li>
+                    <li><a href="#">Movement Order</a></li>
+                    <li><a href="#">TA/DA Advance</a></li>
+                    <li><a href="#">Notice</a></li>
+                    <li><a href="#">Grievance</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <div class="user-info">
+                    <img id="userAvatar" src="img/avatar.png" alt="User Avatar" class="avatar">
+                    <span id="userEmail">user@example.com</span>
+                </div>
+                <a href="index.html" class="logout-btn">Logout</a>
+            </div>
+        </header>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-content">
+                <div class="breadcrumb-path">
+                    <a href="dashboard.html">Home</a> / Dashboard
+                </div>
+                <h2 class="page-title">Dashboard</h2>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="dashboard-grid">
+                <!-- Employee Profile Card -->
+                <div class="profile-card">
+                    <div class="profile-header">
+                        <span class="profile-emoji">😊</span>
+                        <h2 id="employeeName">Binod Baruah</h2>
+                    </div>
+                    <div class="profile-content">
+                        <div class="profile-item">
+                            <i class="fas fa-id-card"></i>
+                            <span id="employeeId">CPCG020</span>
+                        </div>
+                        <div class="profile-item">
+                            <i class="fas fa-phone"></i>
+                            <span id="employeePhone">8800332429</span>
+                        </div>
+                        <div class="profile-item">
+                            <i class="fas fa-envelope"></i>
+                            <span id="employeeEmail">bbaruah985@gmail.com</span>
+                        </div>
+
+                        <div class="profile-details">
+                            <div class="profile-detail-item">
+                                <h3>Gender</h3>
+                                <p id="employeeGender">MALE</p>
+                            </div>
+                            <div class="profile-detail-item">
+                                <h3>Joining Date</h3>
+                                <p id="employeeJoiningDate">01-06-1997</p>
+                            </div>
+                            <div class="profile-detail-item">
+                                <h3>Birth Date</h3>
+                                <p id="employeeBirthDate">01-10-1971</p>
+                            </div>
+                            <div class="profile-detail-item">
+                                <h3>Highest Degree</h3>
+                                <p id="employeeDegree">Class 10 Pass</p>
+                            </div>
+                        </div>
+
+                        <button id="editProfileBtn" class="btn btn-outline">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Leave Balance Cards -->
+                <div class="leave-cards">
+                    <div class="leave-card casual-leave">
+                        <h3>Casual Leave Balance</h3>
+                        <p class="leave-count">12</p>
+                    </div>
+                    <div class="leave-card restricted-leave">
+                        <h3>Restricted Leave Balance</h3>
+                        <p class="leave-count">2</p>
+                    </div>
+                    <div class="leave-card paternity-leave">
+                        <h3>Paternity Leave Balance</h3>
+                        <p class="leave-count">15</p>
+                    </div>
+                    <div class="leave-card commuted-leave">
+                        <h3>Commuted Leave Balance</h3>
+                        <p class="leave-count">464</p>
+                    </div>
+                    <div class="leave-card compensatory-leave">
+                        <h3>Compensatory Leave Balance</h3>
+                        <p class="leave-count">0</p>
+                    </div>
+                    <div class="leave-card earned-leave">
+                        <h3>Earned Leave (Encashable) Balance</h3>
+                        <p class="leave-count">197</p>
+                    </div>
+                    <div class="leave-card earned-leave-non">
+                        <h3>Earned Leave (Non Encashable) Balance</h3>
+                        <p class="leave-count">233</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-second-row">
+                <!-- Clock -->
+                <div class="clock-container">
+                    <div class="clock">
+                        <div class="hour-hand"></div>
+                        <div class="minute-hand"></div>
+                        <div class="second-hand"></div>
+                        <div class="center-dot"></div>
+                        <div class="hour-marks"></div>
+                    </div>
+                </div>
+
+                <!-- Calendar -->
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                        <h2 id="currentMonth">February 2025</h2>
+                        <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div id="calendarDays" class="calendar-days"></div>
+                </div>
+            </div>
+
+            <!-- Holiday List -->
+            <div class="holiday-section">
+                <h2>Holiday List</h2>
+                <div class="holiday-controls">
+                    <div class="holiday-year-selector">
+                        <select id="holidayYear">
+                            <option value="2025">2025</option>
+                            <option value="2024">2024</option>
+                        </select>
+                    </div>
+                    <div class="holiday-month-selector">
+                        <select id="holidayMonth">
+                            <option value="1">Jan</option>
+                            <option value="2" selected>Feb</option>
+                            <option value="3">Mar</option>
+                            <option value="4">Apr</option>
+                            <option value="5">May</option>
+                            <option value="6">Jun</option>
+                            <option value="7">Jul</option>
+                            <option value="8">Aug</option>
+                            <option value="9">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
+                        </select>
+                    </div>
+                    <div class="holiday-view-selector">
+                        <button class="btn btn-sm active">Month</button>
+                        <button class="btn btn-sm">Year</button>
+                    </div>
+                </div>
+                <div class="holiday-table">
+                    <div class="holiday-table-header">
+                        <div>Su</div>
+                        <div>Mo</div>
+                        <div>Tu</div>
+                        <div>We</div>
+                        <div>Th</div>
+                        <div>Fr</div>
+                        <div>Sa</div>
+                    </div>
+                    <div id="holidayTableBody" class="holiday-table-body">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Profile</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="editProfileForm">
+                    <div class="form-group">
+                        <label for="editName">Name</label>
+                        <input type="text" id="editName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editEmail">Email</label>
+                        <input type="email" id="editEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPhone">Phone</label>
+                        <input type="text" id="editPhone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editGender">Gender</label>
+                        <select id="editGender" name="gender" required>
+                            <option value="MALE">MALE</option>
+                            <option value="FEMALE">FEMALE</option>
+                            <option value="OTHER">OTHER</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editJoiningDate">Joining Date</label>
+                        <input type="text" id="editJoiningDate" name="joiningDate" placeholder="DD-MM-YYYY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editBirthDate">Birth Date</label>
+                        <input type="text" id="editBirthDate" name="birthDate" placeholder="DD-MM-YYYY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editDegree">Highest Degree</label>
+                        <input type="text" id="editDegree" name="degree" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelEditBtn">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- View Profile Modal -->
+    <div id="viewProfileModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Employee Profile</h2>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="profile-view">
+                    <div class="profile-view-avatar">
+                        <img id="profileViewAvatar" src="img/avatar.png" alt="Employee Avatar">
+                    </div>
+                    <h2 id="profileViewName">Binod Baruah</h2>
+                    <p id="profileViewId" class="profile-view-id">CPCG020</p>
+                    
+                    <div class="profile-view-details">
+                        <div class="profile-view-item">
+                            <h3>Email</h3>
+                            <p id="profileViewEmail">bbaruah985@gmail.com</p>
+                        </div>
+                        <div class="profile-view-item">
+                            <h3>Phone</h3>
+                            <p id="profileViewPhone">8800332429</p>
+                        </div>
+                        <div class="profile-view-item">
+                            <h3>Gender</h3>
+                            <p id="profileViewGender">MALE</p>
+                        </div>
+                        <div class="profile-view-item">
+                            <h3>Joining Date</h3>
+                            <p id="profileViewJoiningDate">01-06-1997</p>
+                        </div>
+                        <div class="profile-view-item">
+                            <h3>Birth Date</h3>
+                            <p id="profileViewBirthDate">01-10-1971</p>
+                        </div>
+                        <div class="profile-view-item">
+                            <h3>Highest Degree</h3>
+                            <p id="profileViewDegree">Class 10 Pass</p>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-view-actions">
+                        <button id="viewProfileEditBtn" class="btn btn-outline">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+

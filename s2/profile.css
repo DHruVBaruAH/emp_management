@@ -1,0 +1,136 @@
+/* Profile Page Styles */
+.profile-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 1.5rem;
+  }
+  
+  .profile-sidebar {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+  }
+  
+  .profile-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--gray-200);
+  }
+  
+  .profile-sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .profile-id {
+    color: var(--gray-500);
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-actions {
+    margin-top: 1.5rem;
+  }
+  
+  .profile-main {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+  }
+  
+  .profile-section {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .profile-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .profile-info-item h4 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    margin-bottom: 0.25rem;
+  }
+  
+  .profile-info-item p {
+    font-size: 1rem;
+    color: var(--gray-800);
+  }
+  
+  /* Profile View Modal */
+  .profile-view {
+    text-align: center;
+  }
+  
+  .profile-view-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+  }
+  
+  .profile-view-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--gray-200);
+  }
+  
+  .profile-view-id {
+    color: var(--gray-500);
+    margin-bottom: 1.5rem;
+  }
+  
+  .profile-view-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    text-align: left;
+    margin-top: 1.5rem;
+  }
+  
+  .profile-view-item h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    margin-bottom: 0.25rem;
+  }
+  
+  .profile-view-actions {
+    margin-top: 1.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .profile-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .profile-view-details {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  

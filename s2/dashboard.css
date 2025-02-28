@@ -1,0 +1,353 @@
+/* Dashboard Styles */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+  }
+  
+  /* Profile Card */
+  .profile-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+  }
+  
+  .profile-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .profile-emoji {
+    font-size: 1.5rem;
+  }
+  
+  .profile-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .profile-content {
+    padding: 1.5rem;
+  }
+  
+  .profile-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--gray-100);
+    border-radius: var(--border-radius);
+    margin-bottom: 0.75rem;
+  }
+  
+  .profile-item i {
+    color: var(--gray-500);
+  }
+  
+  .profile-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .profile-detail-item h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-700);
+  }
+  
+  .profile-detail-item p {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+  }
+  
+  /* Leave Cards */
+  .leave-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .leave-card {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    color: white;
+  }
+  
+  .leave-card h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .leave-count {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .casual-leave {
+    background-color: #b91c1c;
+  }
+  
+  .restricted-leave {
+    background-color: #7e22ce;
+  }
+  
+  .paternity-leave {
+    background-color: #1d4ed8;
+  }
+  
+  .commuted-leave {
+    background-color: #059669;
+  }
+  
+  .compensatory-leave {
+    background-color: #047857;
+  }
+  
+  .earned-leave {
+    background-color: #b45309;
+  }
+  
+  .earned-leave-non {
+    background-color: #b45309;
+  }
+  
+  /* Dashboard Second Row */
+  .dashboard-second-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  /* Clock */
+  .clock-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 4px solid var(--gray-200);
+    border-radius: 50%;
+  }
+  
+  .hour-hand,
+  .minute-hand,
+  .second-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    border-radius: 10px;
+  }
+  
+  .hour-hand {
+    width: 6px;
+    height: 60px;
+    background-color: var(--gray-800);
+    transform: translateX(-50%);
+  }
+  
+  .minute-hand {
+    width: 4px;
+    height: 80px;
+    background-color: var(--gray-800);
+    transform: translateX(-50%);
+  }
+  
+  .second-hand {
+    width: 2px;
+    height: 90px;
+    background-color: #ef4444;
+    transform: translateX(-50%);
+  }
+  
+  .center-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    background-color: var(--gray-800);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hour-marks::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 12px;
+    background-color: var(--gray-800);
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Calendar */
+  .calendar-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .calendar-header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--gray-600);
+  }
+  
+  .calendar-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 600;
+    color: var(--gray-600);
+    margin-bottom: 0.5rem;
+  }
+  
+  .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.25rem;
+  }
+  
+  .calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .calendar-day:hover {
+    background-color: var(--gray-100);
+  }
+  
+  .calendar-day.today {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .calendar-day.other-month {
+    color: var(--gray-400);
+  }
+  
+  /* Holiday List */
+  .holiday-section {
+    margin-top: 1.5rem;
+  }
+  
+  .holiday-section h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .holiday-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .holiday-year-selector,
+  .holiday-month-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .holiday-year-selector select,
+  .holiday-month-selector select {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius);
+  }
+  
+  .holiday-view-selector {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .holiday-table {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+  }
+  
+  .holiday-table-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding: 0.75rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .holiday-table-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  .holiday-date {
+    padding: 0.75rem;
+    text-align: center;
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .holiday-date:nth-child(7n) {
+    border-right: none;
+  }
+  
+  .holiday-date.other-month {
+    color: var(--gray-400);
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .dashboard-grid,
+    .dashboard-second-row {
+      grid-template-columns: 1fr;
+    }
+  
+    .leave-cards {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
+  
+  
